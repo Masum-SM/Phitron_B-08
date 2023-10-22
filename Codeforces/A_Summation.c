@@ -11,14 +11,17 @@
 #include<ctype.h>
 
 int main(){
-    char s1[1000],s2[1000],ans[1000];
-    scanf("%s",&s1);
-    scanf("%s",&s2);
-    int l1 = strlen(s1);
-    int l2 = strlen(s2);
-    printf("%d %d\n",l1,l2);
- 
-    printf("%s %s",s1,s2);
+    long long n,sum = 0;
+    scanf("%lld",&n);
+    long long arr[n+1];
+    for(int i = 0 ; i < n ; i++){
+        scanf("%lld",&arr[i]);
+    }
+    for(int i = 0 ; i < n ; i++){
+        sum = sum+arr[i];
+    }
+    if(sum<0) sum *= -1;
+    printf("%lld",sum);
 
 
     return 0;
